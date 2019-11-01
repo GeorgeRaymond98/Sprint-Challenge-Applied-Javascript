@@ -17,3 +17,30 @@
     <div class="right-button"> > </div>
   </div>
 */
+axios.get('https://lambda-times-backend.herokuapp.com/topics').then(res => {
+    console.log(res.data);
+})
+const carouselContainer = document.querySelector('.carousel-container');
+function creatcarousel(item) {
+  const carousel = document.createElement('div');
+  const leftButton = document.createElement('div');
+  const firstImg = document.createElement('img');
+  const secondImg = document.createElement('img'); 
+  const thirdImg = document.createElement('img'); 
+  const fourthImg = document.createElement('img'); 
+  const rightButton = document.createElement('div');
+
+
+carouselContainer.appendChild(carousel);
+carousel.appendChild(leftButton);
+carousel.appendChild(firstImg);
+carousel.appendChild(secondImg);
+carousel.appendChild(thirdImg);
+carousel.appendChild(fourthImg);
+carousel.appendChild(rightButton);
+
+
+
+return carousel;
+
+}

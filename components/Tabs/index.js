@@ -10,12 +10,15 @@
 
 
 axios.get('https://lambda-times-backend.herokuapp.com/topics').then(res => {
-    console.log(res.data);
+    // console.log(res.data);
     const diffTopic = res.data.topics;
     diffTopic.forEach(pickTopc => {
         const newTab = Createtab(pickTopc);
         topicClass.appendChild(newTab)
     })
+})
+.catch(error => {
+    console.log("The data was not returned", error);
 })
 
 
